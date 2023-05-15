@@ -81,12 +81,12 @@ span.psw {
 
   <div class="container">
     <label  class="text-white" for="uname"><b>Username</b></label>
-    <input (change)="unameChange($event)" class="form-control" type="text" [placeholder]="placeHolderData" name="uname" required>
+    <input #uname class="form-control" type="text" [placeholder]="placeHolderData" name="uname" required>
 
     <label class="text-white" for="psw"><b>Password</b></label>
-    <input class="form-control" type="password" placeholder="Enter Password" name="psw" required>
+    <input #psw class="form-control" type="password" placeholder="Enter Password" name="psw" required>
         
-    <button (click)="login()" class="form-control" type="submit">Login</button>
+    <button (click)="login(uname,psw)" class="form-control" type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
