@@ -81,14 +81,14 @@ span.psw {
 
   <div class="container">
     <label  class="text-white" for="uname"><b>Username</b></label>
-    <input #uname class="form-control" type="text" [placeholder]="placeHolderData" name="uname" required>
+    <input [(ngModel)]="uname" id="u1" class="form-control" type="text" [placeholder]="placeHolderData" name="uname" required>
 
     <label class="text-white" for="psw"><b>Password</b></label>
-    <input #psw class="form-control" type="password" placeholder="Enter Password" name="psw" required>
+    <input [(ngModel)]="psw" id="p1" class="form-control" type="password" placeholder="Enter Password" name="psw" required>
         
-    <button (click)="login(uname,psw)" class="form-control" type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
+    <button (click)="login()" class="form-control" type="submit">Login</button>
+    <label class="text-white">
+      <input  type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div>
 
