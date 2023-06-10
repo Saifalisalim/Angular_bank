@@ -3,3 +3,34 @@
     background-size: cover;
     height: 800px;
 } */
+form{
+    background-image: url(https://i.postimg.cc/cC0Hd5Yb/pngwing-com-26.png);
+    background-size: cover;
+}
+
+header{
+    background-image: url(https://i.postimg.cc/0y4g7JwG/235-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 25%;
+}
+
+form {
+    --c: rgba(3, 65, 65, 0.348); /* the color */
+    
+    color: #0000;
+    background: 
+      linear-gradient(90deg,#fff 50%,var(--c) 0) calc(100% - var(--_p,0%))/200%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) no-repeat,
+      var(--_c,#0000);
+    -webkit-background-clip: text,padding-box,padding-box;
+            background-clip: text,padding-box,padding-box;
+    transition: 0s ,color .5s,background-color .5s;
+  }
+  form:hover {
+    color: #fff;
+    --_c: var(--c);
+    --_p: 100%;
+    transition: 0.5s,color 0s .5s,background-color 0s .5s;
+  }
+  

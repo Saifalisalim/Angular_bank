@@ -1,20 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
 
 </head>
+
 <body>
+
+    <header data-bs-theme="dark">
+        <div style="background-color: rgba(0, 0, 0, 0.148);" class="collapse" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4 text-light">
+                        <h4>About Us</h4>
+                        <p class="text-body-secondary">ADFC Bank is one of India's leading private banks and was among
+                            the first to receive approval from the Reserve Bank of India (RBI) to set up a private
+                            sector bank in 1994.
+
+                            As of March 31, 2023, the Bank had a nationwide distribution network of 7,821 branches and
+                            19,727 ATMs / Cash Deposit & Withdrawal Machines (CDMs) across 3,811 cities / towns.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4 text-light">
+                        <h4>Connect</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.facebook.com/" class="text-body-secondary text-decoration-none"><img style="width: 8%;"
+                                        src="https://i.postimg.cc/9XrJpNcX/Facebook-Logo.png" alt=""> Facebook</a></li>
+                            <li><a href="https://www.instagram.com/" class="text-body-secondary text-decoration-none"><img style="width: 8%;"
+                                        src="https://i.postimg.cc/50wNdmVX/Instagr-m-Logo.png" alt=""> Instagram</a>
+                            </li>
+                            <li><a href="https://twitter.com/i/flow/login" class="text-body-secondary text-decoration-none"><img style="width: 8%;"
+                                        src="https://i.postimg.cc/wvV8Q4zQ/Twitter-Logo.png" alt=""> Twitter</a></li>
+                            <br>
+                            <button id="h1" (click)="logout()" type="button"
+                                class="btn btn-outline-secondary">Logout</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: rgba(0, 0, 0, 0.148);" class="navbar navbar-dark  shadow-sm">
+            <div class="container">
+                <a href="" class="navbar-brand d-flex align-items-center">
+                    <img class="" src="https://i.postimg.cc/Y24QjdcJ/Mastercard-Logo.png" alt="" width="50" height="25">
+                    <strong>ADFC Bank</strong>
+                </a>
+                <button class="navbar-toggler collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+<main>
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Welcome {{user}} !</h1>
+                    <p class="lead text-body-secondary">Tailor Your Banking Experience, Manage
+                        preferences, update information, manage beneficiaries, set up alerts, and access valuable insights
+                        to streamline your financial journey
+                        with ADFC Bank.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Balance -->
     
-<div class="text-white container" style="height: 640px;">
-    <h1 class="text-white">Welcome</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti quae libero quo perspiciatis nesciunt quisquam quam tenetur enim neque voluptatibus, maxime vel beatae soluta pariatur animi obcaecati aspernatur et.</p>
-    <button type="submit" class="btn btn-primary">read more</button>
+        <br>
+        <div class="container marketing text-center mb-5">
     
-</div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="https://i.postimg.cc/4y3KM1Gz/noun-check-balance-4577563.png" height="130"
+                            width="160" />
+                    </svg>
+                    <h2 class="fw-normal">Balance</h2>
+                    <p class="lead fs-6">Empower Your Financial Journey.
+                        Stay Informed, Make Informed Decisions.
+                        Take Charge of Your Finances with a Single Click.</p>
+                    <button id="h2" (click)="getBalance()" class="btn btn-outline-light" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                        aria-controls="offcanvasWithBothOptions">Balance Enquiry</button>
+    
+                    <div style="background-color: rgba(0, 0, 0, 0.384); background-image:url(https://i.postimg.cc/d3QBjXCc/pngwing-com-15.png); background-size: cover;"
+                        class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                        aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Hey {{user}},</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body text-light mt-4">
+                            <p> <i class="text-body-danger">"Regularly monitor your balance to stay aware of your financial
+                                    standing and make informed decisions for a secure and prosperous future."</i> <br> <br>
+                                <br>
+                                <strong> Your current balance is: <br> ₹ {{balance}}</strong>
+                            </p>
+    
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account -->
+    
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="https://i.postimg.cc/SQV55nPS/noun-account-5718961.png" height="140" width="140" />
+                    </svg>
+                    <h2 class="fw-normal">Account</h2>
+                    <p class="lead fs-6">Customize your banking experience with our comprehensive profile.
+                        Effortlessly manage your information and preferences with a Single Click</p>
+                    <!-- Button trigger modal -->
+                    <button id="h3" (click)="acView()" type="button" class="btn btn-outline-light   " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        View Account Details
+                    </button>
+    
+                    <!-- Modal -->
+                    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div style="background-color: rgba(0, 0, 0, 0.39); background-image:url(https://i.postimg.cc/fTTTnKs2/pngwing-com-10.png); background-size: contain;"
+                                class="modal-content">
+                                <div class="mt-4">
+                                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel"> <img
+                                            style=" width: 50%;" src="https://i.postimg.cc/CdTMtYSD/pngwing-com-1.png"
+                                            alt=""> </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-light">
+                                    <h5>User Name: <strong>{{user}}</strong></h5>
+                                    <h5>Account Number: <strong>{{acno}}</strong></h5>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div> <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fund transfer -->
+    
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="https://i.postimg.cc/tRS2QJ0p/noun-payment-36297.png" height="160" width="155" />
+                    </svg>
+                    <h2 class="fw-normal">Internet Banking</h2>
+                    <p id="invest" class="lead fs-6">Swift and Secure: Transfer funds seamlessly between accounts, making your financial
+                        transactions
+                        effortless and worry-free.</p>
+                    <button class="btn btn-outline-light mt-4" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Fund Transfer</button>
+    
+                    <div style="background-color: rgba(0, 0, 0, 0.373); background-image:url(https://i.postimg.cc/d3QBjXCc/pngwing-com-15.png); background-size: cover;"
+                        class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h4 class="offcanvas-title text-light" id="offcanvasRightLabel"><strong>Fund Transfer</strong>
+                            </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+    
+                            <form (ngSubmit)="funTransfer()" [formGroup]="moneyTransferForm">
+                                <div class="mb-3 text-end">
+                                    <label for="exampleInputEmail1" class="form-label text-light">Payee</label>
+                                    <input formControlName="toAcno" id="f1" type="text" placeholder="enter account number"
+                                        class="form-control" aria-describedby="emailHelp" name="toacno">
+                                </div>
+    
+                                <div
+                                    *ngIf="(this.moneyTransferForm.get('toAcno')?.errors)&&(this.moneyTransferForm.get('toAcno')?.touched)">
+                                    <p class="text-danger">must contain numbers only</p>
+                                </div>
+    
+                                <div class="mb-3 text-end">
+                                    <label for="exampleInputEmail1" class="form-label text-light">Amount</label>
+                                    <input formControlName="amount" id="f1" type="text" placeholder="enter amount"
+                                        class="form-control" aria-describedby="emailHelp" name="amnt">
+                                </div>
+    
+                                <div
+                                    *ngIf="(this.moneyTransferForm.get('amount')?.errors)&&(this.moneyTransferForm.get('amount')?.touched)">
+                                    <p class="text-danger">must contain numbers only</p>
+                                </div>
+    
+                                <div class="mb-3 text-end">
+                                    <label for="exampleInputPassword1" class="form-label text-light">Password</label>
+                                    <input formControlName="psw" id="f1" type="password" placeholder="enter password"
+                                        class="form-control" name="pswd1">
+                                </div>
+    
+                                <div
+                                    *ngIf="(this.moneyTransferForm.get('psw')?.errors)&&(this.moneyTransferForm.get('psw')?.touched)">
+                                    <p class="text-danger">must contain numbers and characters only</p>
+                                </div>
+    
+                                <button type="submit" class="btn btn-outline-secondary">Transfer</button>
+                                <div [ngClass]="tStatus?'s1':'s2'" class="fs-4 mt-4">
+                                    <p>{{transactionStatus}}</p>
+                                </div>
+                            </form>
+    
+    
+                        </div>
+                    </div>
+                </div>
+            </div> <br> <br>
+    
+    
+    <!-- Transaction -->
+    
+            <div class="row">
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="150" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="https://i.postimg.cc/mr2VSGTL/noun-history-4892959.png" height="180" width="135" />
+                    </svg>
+                    <h2 class="fw-normal">Transactions</h2>
+                    <p class="lead fs-6">Explore your transaction history for a comprehensive overview of your financial
+                        activities and decisions.</p>
+                        <a href="/transaction">
+                    <button class="btn btn-outline-light" type="button">Transactions</button>
+                </a>
+                </div>
+
+                <!-- Deactivate -->
+    
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="https://i.postimg.cc/pLfkMJ26/noun-unfollow-5005508.png" height="180" width="145" />
+                    </svg>
+                    <h2 class="fw-normal">Deactivate</h2>
+                    <p class="lead fs-6"> Proceed with care as deactivating your account will permanently remove all data
+                        and cannot be undone.</p>
+                    <button (click)="deleteClick()" class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Deactivate</button>
+    
+                    <div  style="background-color: rgba(0, 0, 0, 0.384);" class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <app-delete (onDelete)="yesDelete($event)" (onCancel)="NoDelete()" [childAcno]="Dacno"></app-delete>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="https://i.postimg.cc/L85CL1RC/noun-invest-2534505.png" height="180" width="145" />
+                    </svg>
+                    <h2 class="fw-normal">Invest</h2>
+                    <p id="invest" class="lead fs-6">Unlock your financial future and invest wisely today, paving the path to wealth and prosperity tomorrow.</p>
+                    <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Invest</button>
+    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    
+    
+</main>
+
+<footer class="pt-4 my-md-1 pt-md-5 border-top container text-center">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="https://i.postimg.cc/Y24QjdcJ/Mastercard-Logo.png" alt="" width="50" height="25">
+        <small class="d-block mb-3 text-body-secondary">© 2017-2023</small>
+      </div>
+      <div class="col-6 col-md text-light">
+        <h5><strong><u>Media Cente</u>r</strong></h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Corporate Profile</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Vision and Values</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Awards & Recognition</a></li>
+          <li class="mb-1"><a class="text-body linkt text-decoration-none" href="#">Press release</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Gallery</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Stock Information</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md text-light">
+        <h5><strong><u>Resources</u></strong></h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Ways To Bank</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Rates</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Bank Holiday List</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Credit Card</a></li>
+        </ul>
+      </div>
+      <div  class="col-6 col-md text-light">
+        <h5 ><strong><u>Need Help</u></strong></h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">FAQs</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Customer Care</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Contact Us</a></li>
+          <li class="mb-1"><a class="text-body link text-decoration-none" href="#">Locate Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+
+
+
+
 </body>
+
 </html>

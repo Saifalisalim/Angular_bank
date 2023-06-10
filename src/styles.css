@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-image: url('https://i.postimg.cc/YCBxKt9s/andre-taissin-5-OUMf1-Mr5p-U-unsplash.jpg');
-    background-size: cover;
-}
+    background-image: linear-gradient(to right, rgba(1, 54, 54, 0.422),rgba(1, 76, 76, 0.849), rgb(2, 56, 56));
+  }

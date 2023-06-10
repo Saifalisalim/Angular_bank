@@ -1,0 +1,27 @@
+.s1{
+    color: teal;
+    
+}
+.s2{
+    color: darkred;
+}
+
+/* body{
+    background-color: rgba(2, 56, 56, 0.747);
+    background-image: url('https://i.postimg.cc/h4xLTVdt/pngwing-com-15.png');
+    background-size: cover;
+} */
+
+header{
+    background-image: url(https://i.postimg.cc/0y4g7JwG/235-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 25%;
+}
+
+#invest {
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(rgb(118, 115, 115), rgba(255, 255, 255, 0.658));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

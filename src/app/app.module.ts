@@ -7,21 +7,30 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http'
+import { DatePipe } from '@angular/common';
+import { TransactionComponent } from './transaction/transaction.component';
+import { DeleteComponent } from './delete/delete.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationPageComponent,
-    HomeComponent
+    HomeComponent,
+    TransactionComponent,
+    DeleteComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
